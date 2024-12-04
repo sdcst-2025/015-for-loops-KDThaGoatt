@@ -22,3 +22,14 @@ enter a number:4
 ****
 
 """
+
+wh = int(input("Enter in the side length of your box"))
+ast = ""
+
+if wh < 10:
+    for wh in range(wh, wh + 1):
+        ast = "*" * wh
+        for wh in range(wh):
+            print(ast, end='\n')
+
+            
