@@ -38,15 +38,20 @@ Enter a number: -4
 Invalid input
 """
 
-x = (input("Enter a number: "))
-y = 0
+i = (input("Enter a number: "))
+pastTotal = 1
+newTotal = 1
 try:
-    x = int(x)
-    if x % 1 == 0:
-        for x in range(1, x + 1):
-            y = x * x
-            print(y)
-    else:
-        print("Invalid input")
+    i = int(i)
 except:
+    print("Invalid Input")
+    exit()
+
+if i % 1 == 0 and i > 0:
+    for i in range(1, i + 1):
+        pastTotal = newTotal
+        newTotal = pastTotal * i
+    print(f"!{i} is {newTotal}")
+else:
     print("Invalid input")
+    exit()
